@@ -107,7 +107,7 @@
 
 
 
-                <form role="form" class="form-horizontal">
+                <form role="form" class="form-horizontal" action="quote-complete.php" method="post" >
 					<fieldset>
 
 
@@ -116,7 +116,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="wordcountform">Word Count</label>
 					  <div class="col-md-4">
-					  <input id="wordcountform" name="wordcountform" type="number"  class="form-control input-md" required="">
+					  <input id="uploadfile" name="uploadfile" type="file"  class="form-control input-md" required="">
 
 					  </div>
 					</div>
