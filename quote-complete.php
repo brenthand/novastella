@@ -44,6 +44,9 @@
 </head>
 
 <body id="page-top" class="index navbar-fixed-top">
+  <?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT); ?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
@@ -81,7 +84,7 @@
                         <a class="page-scroll" href="index.html#contact">Contact</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="quote.html">Quote</a>
+                        <a class="page-scroll" href="quote.php">Quote</a>
                     </li>
                 </ul>
             </div>
@@ -106,18 +109,31 @@
               <?php
                   include('class.pdf2text.php');
                   $target_dir = "uploads/";
-                  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                  $target_file = "/tmp/" . basename($_FILES["uploadfile"]["name"]);
                   $uploadOk = 1;
-                  $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+                  //$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
                   // Check if image file is a actual image or fake image
+                  //print_r($_POST);
+                  //print_r($_FILES);
                   if(isset($_POST["submit"])) {
-                    $file_name = $_FILES['uploadfile']['name'];
-                    $file_extn = end(explode(".", strtolower($_FILES['image']['name'])));
+
+                    $file_name =  $_FILES["uploadfile"]['tmp_name'];
+                    //echo "<br><br>" . $file_name . "<br><br>";
+
+                    //echo "filename" . $file_name;
+                    //$file_extn = strtolower(end(explode('.',$_FILES['uploadfile']['name'])));
+                    $tmp = explode('.', $_FILES["uploadfile"]['name']);
+                    $file_ex = end($tmp);
+                    $file_extn = strtolower($file_ex);
+
+                    //echo "file extension" . $file_extn;
 
                     if($file_extn == "doc" || $file_extn == "docx"){
-                      $words = docx2text();
+                      //echo "word";
+                      $words = docx2text($file_name);
+                      //$words = shell_exec("unzip " . $target_file . "word/document.xml | sed -e 's/<[^>]\{1,\}>//g; s/[^[:print:]]\{1,\}//g'");
                     }elseif($file_extn == "rtf"){
-                      $words = rtf2text();
+                      $words = rtf2text($file_name);
                     }
                     elseif($file_extn == "pdf"){
                       $a = new PDF2Text();
@@ -125,9 +141,12 @@
                       $a->decodePDF();
                       $words = $a->output();
                     }
-
+                    //echo $words;
                     $wordcount = str_word_count($words, 0);
                     echo $wordcount;
+
+                  } else {
+                    echo "oh no";
                   }
 
 
@@ -138,7 +157,7 @@
                   function readZippedXML($archiveFile, $dataFile) {
                   // Create new ZIP archive
                   $zip = new ZipArchive;
-
+                  //echo "\nIn read zipped: " . $archiveFile . "\n";
                   // Open received archive file
                   if (true === $zip->open($archiveFile)) {
                       // If done, search for the data file in the archive
@@ -153,6 +172,7 @@
                       $xml->loadXML($data, LIBXML_NOENT | LIBXML_XINCLUDE | LIBXML_NOERROR | LIBXML_NOWARNING);
                           // Return data without XML formatting tags
                           return strip_tags($xml->saveXML());
+                          //return $xml->saveXML();
                       }
                       $zip->close();
                   }

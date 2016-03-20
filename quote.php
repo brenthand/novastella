@@ -107,7 +107,7 @@
 
 
 
-                <form role="form" class="form-horizontal" action="quote-complete.php" method="post" >
+                <form role="form" class="form-horizontal" action="quote-complete.php" method="POST" enctype="multipart/form-data"/ >
 					<fieldset>
 
 
@@ -116,7 +116,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="wordcountform">Word Count</label>
 					  <div class="col-md-4">
-					  <input id="uploadfile" name="uploadfile" type="file"  class="form-control input-md" required="">
+					  <input  name="uploadfile" type="file"  class="form-control input-md"  >
 
 					  </div>
 					</div>
@@ -136,13 +136,13 @@
 						</div>
 					  <div class="radio">
 						<label for="type-1">
-						  <input type="radio" name="type" id="type-1" value="Transcripts/Subtitles">
+						  <input type="radio" name="type-1" id="type-1" value="Transcripts/Subtitles">
 						  Transcripts/Subtitles
 						</label>
 						</div>
 					  <div class="radio">
 						<label for="type-2">
-						  <input type="radio" name="type" id="type-2" value="Proof Reading">
+						  <input type="radio" name="type-2" id="type-2" value="Proof Reading">
 						  Proof Reading
 						</label>
 						</div>
@@ -375,7 +375,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit">Submit</label>
   <div class="col-md-4">
-    <button id="submit" name="submit" class="btn btn-success">Submit</button>
+    <input id="submit" name="submit" type="submit" class="btn btn-success" />
   </div>
 </div>
 
