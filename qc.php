@@ -28,6 +28,7 @@
       }
       echo $words;
       $wordcount = str_word_count($words, 0);
+      $wordcount = $wordcount + $wordcount * .20;
       echo $wordcount;
 
     } else {

@@ -143,6 +143,7 @@ error_reporting(E_ALL | E_STRICT); ?>
                     }
                     //echo $words;
                     $wordcount = str_word_count($words, 0);
+                    $wordcount = $wordcount + $wordcount * .15;
                     echo $wordcount;
 
                   } else {
