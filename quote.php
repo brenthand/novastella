@@ -11,11 +11,7 @@
 
     <title>Novastella</title>
 
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> fileupload
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -37,8 +33,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<<<<<<< HEAD
-=======
     <script>
       if (window.File && window.FileReader && window.FileList && window.Blob) {
         // Great success! All the File APIs are supported.
@@ -47,7 +41,6 @@
         }
     </script>
 
->>>>>>> fileupload
 </head>
 
 <body id="page-top" class="index navbar-fixed-top">
@@ -81,14 +74,12 @@
                     <li>
                         <a class="page-scroll" href="index.html#about">About</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="index.html#team">Team</a>
-                    </li>
+
                     <li>
                         <a class="page-scroll" href="index.html#contact">Contact</a>
                     </li>
-					<li>
-                        <a class="page-scroll" href="quote.html">Quote</a>
+					<li class="active">
+                        <a class="page-scroll" href="quote.php">Quote</a>
                     </li>
                 </ul>
             </div>
@@ -97,43 +88,11 @@
         <!-- /.container-fluid -->
     </nav>
 
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> fileupload
 
     <!-- Quote Section -->
     <section id="quote" class="quotesection">
         <div class="container">
-<<<<<<< HEAD
-		<div class="well">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Get a Quote</h2>
-                    <h3 class="section-subheading text-muted">Use the the form below to get a quick quote. If you have any questions or have a large project contact us.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-			
-			
-			
-			
-                <form role="form" class="form-horizontal">
-					<fieldset>
-
-					
-
-					<!-- Text input-->
-					<div class="form-group">
-					  <label class="col-md-4 control-label" for="wordcountform">Word Count</label>  
-					  <div class="col-md-4">
-					  <input id="wordcountform" name="wordcountform" type="number"  class="form-control input-md" required="">
-						
-					  </div>
-					</div>
-					
-=======
 		<div class="well ">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -146,23 +105,22 @@
 
 
 
-                <form role="form" class="form-horizontal">
+                <form role="form" class="form-horizontal" action="quote-complete.php" method="POST" enctype="multipart/form-data"/ >
 					<fieldset>
 
 
 
 					<!-- Text input-->
 					<div class="form-group">
-					  <label class="col-md-4 control-label" for="wordcountform">Word Count</label>
+					  <label class="col-md-4 control-label" for="wordcountform">File</label>
 					  <div class="col-md-4">
-					  <input id="wordcountform" name="wordcountform" type="number"  class="form-control input-md" required="">
+					  <input  name="uploadfile" type="file"  class=" input-md"  >
+            <p>*Allowed file types doc, docx, pdf</p>
 
 					  </div>
 					</div>
 
->>>>>>> fileupload
-					<p></p>
-					<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Word Counter</button>
+
 
 					<p></p>
 					<div class="form-group">
@@ -188,11 +146,7 @@
 						</div>
 					  </div>
 					</div>
-<<<<<<< HEAD
-					
-=======
 
->>>>>>> fileupload
 					<!-- Select Basic -->
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="SourceLanguage">SourceLanguage</label>
@@ -201,11 +155,7 @@
 						  <option value="English">English</option>
 						  <option value="Mandarin">Mandarin</option>
 						  <option value="Spanish">Spanish</option>
-<<<<<<< HEAD
-						  
-=======
 
->>>>>>> fileupload
 						  <option value="Hindi">Hindi</option>
 						  <option value="Arabic">Arabic</option>
 						  <option value="Portuguese">Portuguese</option>
@@ -314,11 +264,7 @@
 						<select id="languages" name="languages" class="form-control" multiple="multiple">
 						  <option value="Spanish">Spanish</option>
 						  <option value="Mandarin">Mandarin</option>
-<<<<<<< HEAD
-						  
-=======
 
->>>>>>> fileupload
 						  <option value="English">English</option>
 						  <option value="Hindi">Hindi</option>
 						  <option value="Arabic">Arabic</option>
@@ -420,19 +366,14 @@
 						</select>
 					  </div>
 					</div>
-<<<<<<< HEAD
-					
-					
-=======
 
 
->>>>>>> fileupload
 
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit">Submit</label>
   <div class="col-md-4">
-    <button id="submit" name="submit" class="btn btn-success">Submit</button>
+    <input id="submit" name="submit" type="submit" class="btn btn-success" value="Get Quote" />
   </div>
 </div>
 
@@ -455,17 +396,6 @@
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
 			<h4 class="modal-title">Word count</h4>
 		  </div>
-<<<<<<< HEAD
-		  <div class="modal-body">
-			<p>Paste the text below that you would like to get a word count of.</p>
-			
-			<div class="form-group">
-				<label for="comment">Text:</label>
-				<textarea class="form-control" rows="5" id="text"></textarea>
-			</div>
-			<button class="btn btn-success" id="count">Count</button>
-			<p>Words: <span id="wordCount">0</span></p>
-=======
 		  <div class="modal-body quote-box">
 			<p>Upload the file below to get the word count.</p>
 
@@ -476,7 +406,6 @@
 			</div>
 			<button class="btn btn-success" id="count">Count</button>
 			<p>Words: <span id="list"></span></p>
->>>>>>> fileupload
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -486,21 +415,12 @@
 	  </div>
 	</div>
 	<!-- end word count modal -->
-<<<<<<< HEAD
-    
-            
-
-    
-    
-    
-=======
 
 
 
 
 
 
->>>>>>> fileupload
 
     <footer>
         <div class="container">
@@ -532,11 +452,7 @@
         </div>
     </footer>
 
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> fileupload
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -555,11 +471,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> fileupload
 	<script>
 		counter = function() {
 		var value = $('#text').val();
@@ -571,17 +483,10 @@
 
 		var regex = /\s+/gi;
 		var wordCount = value.trim().replace(regex, ' ').split(' ').length;
-<<<<<<< HEAD
-		
-		$('#wordCount').html(wordCount);
-		$('#wordcountform').val(wordCount);
-		
-=======
 
 		$('#wordCount').html(wordCount);
 		$('#wordcountform').val(wordCount);
 
->>>>>>> fileupload
 		};
 
 		$(document).ready(function() {
