@@ -74,14 +74,12 @@
                     <li>
                         <a class="page-scroll" href="index.html#about">About</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="index.html#team">Team</a>
-                    </li>
+
                     <li>
                         <a class="page-scroll" href="index.html#contact">Contact</a>
                     </li>
-					<li>
-                        <a class="page-scroll" href="quote.html">Quote</a>
+					<li class="active">
+                        <a class="page-scroll" href="quote.php">Quote</a>
                     </li>
                 </ul>
             </div>
@@ -114,15 +112,15 @@
 
 					<!-- Text input-->
 					<div class="form-group">
-					  <label class="col-md-4 control-label" for="wordcountform">Word Count</label>
+					  <label class="col-md-4 control-label" for="wordcountform">File</label>
 					  <div class="col-md-4">
-					  <input  name="uploadfile" type="file"  class="form-control input-md"  >
+					  <input  name="uploadfile" type="file"  class=" input-md"  >
+            <p>*Allowed file types doc, docx, pdf</p>
 
 					  </div>
 					</div>
 
-					<p></p>
-					<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Word Counter</button>
+
 
 					<p></p>
 					<div class="form-group">
@@ -136,13 +134,13 @@
 						</div>
 					  <div class="radio">
 						<label for="type-1">
-						  <input type="radio" name="type-1" id="type-1" value="Transcripts/Subtitles">
+						  <input type="radio" name="type" id="type-1" value="Transcripts/Subtitles">
 						  Transcripts/Subtitles
 						</label>
 						</div>
 					  <div class="radio">
 						<label for="type-2">
-						  <input type="radio" name="type-2" id="type-2" value="Proof Reading">
+						  <input type="radio" name="type" id="type-2" value="Proof Reading">
 						  Proof Reading
 						</label>
 						</div>
@@ -375,7 +373,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit">Submit</label>
   <div class="col-md-4">
-    <input id="submit" name="submit" type="submit" class="btn btn-success" />
+    <input id="submit" name="submit" type="submit" class="btn btn-success" value="Get Quote" />
   </div>
 </div>
 

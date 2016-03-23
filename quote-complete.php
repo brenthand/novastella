@@ -77,13 +77,11 @@ error_reporting(E_ALL | E_STRICT); ?>
                     <li>
                         <a class="page-scroll" href="index.html#about">About</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="index.html#team">Team</a>
-                    </li>
+
                     <li>
                         <a class="page-scroll" href="index.html#contact">Contact</a>
                     </li>
-					<li>
+					<li class="active">
                         <a class="page-scroll" href="quote.php">Quote</a>
                     </li>
                 </ul>
@@ -144,7 +142,11 @@ error_reporting(E_ALL | E_STRICT); ?>
                     //echo $words;
                     $wordcount = str_word_count($words, 0);
                     $wordcount = $wordcount + $wordcount * .15;
-                    echo $wordcount;
+                    $cost = ceil($wordcount * .25);
+                    $wc = ceil($wordcount);
+                    echo "<h3>Estimated Project Cost:</h3><h4>$" . $cost . "</h4>";
+                    echo "<p>&nbsp;</p>";
+                    echo "<h5>Estimated Word Count: " . $wc . "</h5>";
 
                   } else {
                     echo "oh no";
@@ -184,8 +186,10 @@ error_reporting(E_ALL | E_STRICT); ?>
               ?>
 
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-
+<p>*All qoutes given are estimates. To recieve a more acurate quote please <a href="index.html#contact">Contact Us</a>
 </div>
 
 
