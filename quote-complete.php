@@ -45,7 +45,7 @@
 
 <body id="page-top" class="index navbar-fixed-top">
   <?php
-ini_set('display_errors', 'On');
+ini_set('display_errors', 'Off');
 error_reporting(E_ALL | E_STRICT); ?>
 
     <!-- Navigation -->
@@ -149,7 +149,7 @@ error_reporting(E_ALL | E_STRICT); ?>
                     echo "<h5>Estimated Word Count: " . $wc . "</h5>";
 
                   } else {
-                    echo "oh no";
+                    echo "<h3>UH Oh! Seems the file was too large. Please <a href='index.html#contact'>Contact us</a></h3>";
                   }
 
 
