@@ -59,7 +59,8 @@ error_reporting(E_ALL | E_STRICT); ?>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html#page-top">Novastella</a>
+                <!--<a class="navbar-brand page-scroll" href="index.html#page-top">Novastella</a>-->
+                <a href="#" class="pull-left"><img src="img/ns-logo2.gif" width="150px"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
