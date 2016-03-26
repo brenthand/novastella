@@ -1,11 +1,16 @@
-<<<<<<< HEAD
-=======
+
 .last::after {
     content: " ";
     display: none !important;
 }
 
->>>>>>> fileupload
+@media only screen and (max-width: 500px) {
+    .shrink-for-small {
+        font-size: 6vw;
+    }
+}
+
+
 .quotesection {
     background-image: url(../img/priest.jpg);
     background-repeat: none;
