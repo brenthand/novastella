@@ -142,7 +142,7 @@ error_reporting(E_ALL | E_STRICT); ?>
                     }
                     //echo $words;
                     $wordcount = str_word_count($words, 0);
-                    $wordcount = $wordcount + $wordcount * .15;
+                    $wordcount = $wordcount + $wordcount * .20;
                     $cost = ceil($wordcount * .25);
                     $wc = ceil($wordcount);
                     echo "<h3>Estimated Project Cost:</h3><h4>$" . $cost . "</h4>";
