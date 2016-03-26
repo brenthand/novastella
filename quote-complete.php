@@ -45,7 +45,7 @@
 
 <body id="page-top" class="index navbar-fixed-top">
   <?php
-ini_set('display_errors', 'Off');
+ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT); ?>
 
     <!-- Navigation -->
