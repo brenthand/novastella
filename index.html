@@ -233,7 +233,8 @@ Since 2005 she has been working as a Translation Consultant providing Translatio
             <div class="row">
                 <div class="col-lg-12">
 
-                    <form name="sentMessage" id="contact" novalidate>
+                    <form name="sentMessage" id="contact"  action="http://novastellatranslations.com/cgi-bin/bluemail" novalidate>
+                      <input type="hidden" name="redirect" value="http://novastellatranslations.com/index.html"/>
 
                         <div class="row">
                             <div class="col-md-6">
@@ -242,7 +243,7 @@ Since 2005 she has been working as a Translation Consultant providing Translatio
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input name="mailfrom" type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
