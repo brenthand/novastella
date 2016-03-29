@@ -61,7 +61,7 @@ error_reporting(E_ALL | E_STRICT); ?>
                     <span class="icon-bar"></span>
                 </button>
                 <!--<a class="navbar-brand page-scroll" href="index.html#page-top">Novastella</a>-->
-                <a href="#" class="pull-left"><img src="img/ns-logo2.gif" width="150px"></a>
+                <a href="index.html#" class="pull-left"><img src="img/ns-logo2.gif" width="150px"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -249,7 +249,7 @@ error_reporting(E_ALL | E_STRICT); ?>
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+   <!-- <script src="js/cbpAnimatedHeader.js"></script>-->
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
