@@ -44,7 +44,7 @@
 
 </head>
 
-<body id="page-top" class="index navbar-fixed-top" style="overflow: scroll;">
+<body id="page-top" class="index">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
