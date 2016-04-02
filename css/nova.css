@@ -10,9 +10,20 @@
     }
 }
 
+@media (min-width: 721px) {
+  header {
+    background-image: url(../img/priest.jpg);
+  }
+}
+@media (max-width: 720px) {
+  header {
+     background-image: url(../img/priest-small.jpg);
+  }
+}
+
 
 .quotesection {
-    background-image: url(../img/priest.jpg);
+
     background-repeat: none;
     background-attachment: scroll;
     background-position: center center;
@@ -277,8 +288,20 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
-header {
+
+@media (min-width: 721px) {
+  header {
     background-image: url(../img/italy.jpg);
+  }
+}
+@media (max-width: 720px) {
+  header {
+     background-image: url(../img/italy-small.jpg);
+  }
+}
+
+header {
+
     background-repeat: none;
     background-attachment: scroll;
     background-position: center center;
