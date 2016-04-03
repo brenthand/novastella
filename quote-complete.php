@@ -128,6 +128,8 @@ error_reporting(E_ALL | E_STRICT); ?>
 
                     echo "file extension" . $file_extn;
 
+                    $words = 0;
+
                     if($file_extn == "doc" || $file_extn == "docx"){
                       //echo "word";
                       $words = docx2text($file_name);
