@@ -120,13 +120,13 @@ error_reporting(E_ALL | E_STRICT); ?>
                     $file_name =  $_FILES["uploadfile"]['tmp_name'];
                     //echo "<br><br>" . $file_name . "<br><br>";
 
-                    //echo "filename" . $file_name;
+                    echo "filename" . $file_name;
                     //$file_extn = strtolower(end(explode('.',$_FILES['uploadfile']['name'])));
                     $tmp = explode('.', $_FILES["uploadfile"]['name']);
                     $file_ex = end($tmp);
                     $file_extn = strtolower($file_ex);
 
-                    //echo "file extension" . $file_extn;
+                    echo "file extension" . $file_extn;
 
                     if($file_extn == "doc" || $file_extn == "docx"){
                       //echo "word";
@@ -218,7 +218,7 @@ error_reporting(E_ALL | E_STRICT); ?>
 
                 </div>
                 <div class="col-md-4">
-                  
+
                 </div>
             </div>
         </div>
