@@ -1,4 +1,33 @@
 
+.services-btn {
+    /*margin: auto;
+    /*width: 60%;
+    border: 3px solid #73AD21;*/
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.services-row {
+  display: table;
+}
+.services-col {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+  horizontal-align: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+
+.level-down {
+  position: absolute;
+  bottom: 0;
+}
+
 .last::after {
     content: " ";
     display: none !important;
