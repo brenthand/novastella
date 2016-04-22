@@ -157,9 +157,14 @@ error_reporting(E_ALL | E_STRICT); ?>
                     $wordcount = $wordcount + $wordcount * .20;
                     $cost = ceil($wordcount * .25);
                     $wc = ceil($wordcount);
-                    echo "<h3>Estimated Project Cost:</h3><h4>$" . $cost . "</h4>";
-                    echo "<p>&nbsp;</p>";
-                    echo "<h5>Estimated Word Count: " . $wc . "</h5>";
+                    if ($wordcount > 0){
+                      echo "<h3>Estimated Project Cost:</h3><h4>$" . $cost . "</h4>";
+                      echo "<p>&nbsp;</p>";
+                      echo "<h5>Estimated Word Count: " . $wc . "</h5>";
+                    }elseif ($wordcount == 0) {
+                      echo "<h3>Uh oh!</h3>";
+                      echo "<p>Something happened. <a href='index.html#contact'>Please contact us</a>.</p>";
+                    }
 
                   } else {
                     echo "<h3>UH Oh! Seems the file was too large. Please <a href='index.html#contact'>Contact us</a></h3>";
