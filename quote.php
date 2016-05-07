@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="nova.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novastella</title>
+    <title>Novastella | Free Quote</title>
 
 
     <!-- Bootstrap Core CSS -->
@@ -432,7 +432,7 @@
                 </div>
 
                 <div class="col-md-4">
-                  
+
                 </div>
             </div>
         </div>
