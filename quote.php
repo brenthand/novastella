@@ -532,7 +532,7 @@
   <!-- Modal script -->
   <script type="text/javascript">
   $(document).ready(function () {
-  $("#form-content").click(function(){
+  $("#submit-email").click(function(){
     replyto = $('#email').val();
     name = $('#name').val();
     $.ajax({
