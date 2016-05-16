@@ -112,6 +112,15 @@
 
 
 
+
+            <div class="form-group">
+  					  <label class="col-md-4 control-label">Email:</label>
+  					  <div class="col-md-4">
+  					  <input  name="email" type="email"  class="input-md"  >
+
+  					  </div>
+  					</div>
+
 					<!-- Text input-->
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="wordcountform">File</label>
@@ -418,6 +427,29 @@
 	</div>
 	<!-- end word count modal -->
 
+  <!-- Begin Modal -->
+  <div id="form-content" class="modal hide fade in" style="display: none;">
+      <div class="modal-header">
+          <a class="close" data-dismiss="modal">×</a>
+          <h3>Stay in touch</h3>
+      </div>
+      <div class="modal-body">
+          <form class="contact" name="contact">
+              <label class="label" for="name">Your Name</label><br>
+              <input type="text" name="name" class="input-xlarge"><br>
+              <label class="label" for="email">Your E-mail</label><br>
+              <input id="email" type="email" name="email" class="input-xlarge"><br>
+          </form>
+      </div>
+      <div class="modal-footer">
+          <input class="btn btn-success" type="submit" value="Continue!" id="submit">
+          <a href="#" class="btn" data-dismiss="modal">Skip.</a>
+      </div>
+  </div>
+  <div id="thanks"><p><a data-toggle="modal" href="#form-content" class="btn btn-primary btn-large">Modal powers, activate!</a></p></div>
+
+<!-- End Modal -->
+
 
 
 
@@ -438,6 +470,40 @@
         </div>
     </footer>
 
+    <!-- Modal script -->
+    <script type="text/javascript">
+    $(document).ready(function () {
+    $("input#submit").click(function(){
+      replyto = $('#email').val();
+      $.ajax({
+         type: "POST",
+         url: "http://quantumwebsystems.com/cgi-sys/FormMail.cgi",
+         data:({
+            recipient: 'admin@novastellatranslations.com',
+            subject:'Email list - quote',
+            email:replyto,
+
+         }),
+         success: function() {
+            $('#form-content').hide().fadeIn(1500)
+            }
+          });
+          return false;
+          });
+       });
+    });
+});
+
+
+
+
+
+    $(window).load(function(){
+        $('#form-content').modal('show');
+    });
+
+</script>
+<!-- End Modal Script -->
 
 
     <!-- jQuery -->
