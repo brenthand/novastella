@@ -42,6 +42,7 @@
         }
     </script>
 
+
 </head>
 
 <body id="page-top" class="index">
@@ -90,6 +91,34 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <!-- Begin Modal -->
+    <div class="container">
+    <div id="form-content" class="modal fade" role="dialog" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>Stay in touch</h3>
+        </div>
+        <div class="modal-body">
+            <form class="contact" name="contact">
+                 <label class="label" for="name">Your Name</label><br>
+                Your Name: <input id="name"type="text" name="name" class="input-xlarge"><br>
+                <label class="label" for="email">Your E-mail</label><br>
+                Your Email: <input id="email" type="email" name="email" class="input-xlarge"><br>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <input class="btn btn-success" type="submit" value="Continue!" id="submit-email" data-dismiss="modal">
+            <br><br><a href="#" class="btn" data-dismiss="modal">Skip.</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+  <!-- End Modal -->
 
 
     <!-- Quote Section -->
@@ -427,28 +456,25 @@
 	</div>
 	<!-- end word count modal -->
 
-  <!-- Begin Modal -->
-  <div id="form-content" class="modal hide fade in" style="display: none;">
-      <div class="modal-header">
-          <a class="close" data-dismiss="modal">×</a>
-          <h3>Stay in touch</h3>
-      </div>
-      <div class="modal-body">
-          <form class="contact" name="contact">
-              <label class="label" for="name">Your Name</label><br>
-              <input type="text" name="name" class="input-xlarge"><br>
-              <label class="label" for="email">Your E-mail</label><br>
-              <input id="email" type="email" name="email" class="input-xlarge"><br>
-          </form>
-      </div>
-      <div class="modal-footer">
-          <input class="btn btn-success" type="submit" value="Continue!" id="submit">
-          <a href="#" class="btn" data-dismiss="modal">Skip.</a>
-      </div>
-  </div>
-  <div id="thanks"><p><a data-toggle="modal" href="#form-content" class="btn btn-primary btn-large">Modal powers, activate!</a></p></div>
 
-<!-- End Modal -->
+
+
+
+
+
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-4">
+                      <span class="copyright">Copyright &copy; Novastella 2016</span>
+                  </div>
+
+                  <div class="col-md-4">
+
+                  </div>
+              </div>
+          </div>
+      </footer>
 
 
 
@@ -456,53 +482,9 @@
 
 
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Novastella 2016</span>
-                </div>
-
-                <div class="col-md-4">
-
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal script -->
-    <script type="text/javascript">
-    $(document).ready(function () {
-    $("input#submit").click(function(){
-      replyto = $('#email').val();
-      $.ajax({
-         type: "POST",
-         url: "http://quantumwebsystems.com/cgi-sys/FormMail.cgi",
-         data:({
-            recipient: 'admin@novastellatranslations.com',
-            subject:'Email list - quote',
-            email:replyto,
-
-         }),
-         success: function() {
-            $('#form-content').hide().fadeIn(1500)
-            }
-          });
-          return false;
-          });
-       });
-    });
-});
 
 
 
-
-
-    $(window).load(function(){
-        $('#form-content').modal('show');
-    });
-
-</script>
 <!-- End Modal Script -->
 
 
@@ -545,6 +527,49 @@
 			$('#count').click(counter);
 		});
 	</script>
+
+<!-- http://quantumwebsystems.com/cgi-sys/FormMail.cgi -->
+  <!-- Modal script -->
+  <script type="text/javascript">
+  $(document).ready(function () {
+  $("#form-content").click(function(){
+    replyto = $('#email').val();
+    name = $('#name').val();
+    $.ajax({
+       type: "POST",
+       url: "http://quantumwebsystems.com/cgi-sys/FormMail.cgi",
+       data:({
+          recipient: 'admin@novastellatranslations.com',
+          subject:'Email list - quote',
+          name: name,
+          mailfrom: replyto,
+
+       }),
+
+       success: function() {
+          $('#form-content').hide().fadeIn(1500)
+          }
+        });
+        return false;
+        });
+     });
+
+
+
+$(document).ready(function(){
+  $('#form-content').modal('show');
+});
+
+
+$('#submit-email').click(function(){
+  $('#form-content').modal('hide');
+});
+
+
+
+
+
+</script>
 
 </body>
 
