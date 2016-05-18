@@ -81,6 +81,10 @@ error_reporting(E_ALL | E_STRICT); ?>
                     </li>
 
                     <li>
+                        <a onclick="ga('send', 'event', 'blog', 'click', 'Blog link click');"class="page-scroll" href="/blog">Blog</a>
+                    </li>
+
+                    <li>
                         <a class="page-scroll" href="index.html#contact">Contact</a>
                     </li>
 					<li class="active">
