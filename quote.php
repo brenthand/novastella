@@ -146,13 +146,13 @@
 
 
 
-            <div class="form-group">
+            <!--<div class="form-group">
   					  <label class="col-md-4 control-label">Email:</label>
   					  <div class="col-md-4">
   					  <input  name="email" type="email"  class="input-md"  >
 
   					  </div>
-  					</div>
+  					</div>-->
 
 					<!-- Text input-->
 					<div class="form-group">
